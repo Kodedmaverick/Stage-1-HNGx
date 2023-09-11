@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Frontend Task</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="slack-name" data-testid="slackUserName">Kodedgears</h1>
+  <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RWS2GTL1-a6ae1ab3cabd-512" alt="Kolom's Slack profile picture" class="slack-display-picture" data-testid="slackDisplayImage" height="250" width="250"><br><br>
+  <span>Today is </span>
+  <span id="currentDay" class="current-day-of-the-week" data-testid="currentDayOfTheWeek">Today is </span>
+<script>
+var getCurrentDayOfTheWeek = function() {
+  var today = new Date();
+  var day = today.getDay();
+  var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  return dayNames[day];
+};
+
+document.getElementById("currentDay").innerHTML = getCurrentDayOfTheWeek();
+</script>
+<br><span>The current UTC time is </span>
+<span id="currentTime" class="current-utc-time" data-testid="currentUTCTime">The current UTC time is </span>
+<script>
+var getCurrentUTCTimeInHoursMinutesSecondsMilliseconds = function() {
+  var now = new Date();
+  var hours = now.getUTCHours();
+  var minutes = now.getUTCMinutes();
+  var seconds = now.getUTCSeconds();
+  var milliseconds = now.getUTCMilliseconds();
+
+  return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+};
+
+document.getElementById("currentTime").innerHTML = getCurrentUTCTimeInHoursMinutesSecondsMilliseconds();
+</script>
+  <p>My track is <span class="track">Frontend</span></p>
+  <a href="https://github.com/Kodedmaverick/Stage-1-HNGx/tree/ed7eeb96ed16723025415abe39f307f3f18496c3/Stage%201%20HNG" class="github-url" data-testid="githubURL">GitHub Repository</a>
+</div>
+</body>
+</html>
