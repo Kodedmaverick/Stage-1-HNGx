@@ -9,7 +9,7 @@
   <h1 class="slack-name" data-testid="slackUserName">Kodedgears</h1>
   <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RWS2GTL1-a6ae1ab3cabd-512" alt="Kodedgears" class="slack-display-picture" data-testid="slackDisplayImage" height="250" width="250"><br><br>
   <span>Today is </span>
-  <span id="currentDay" class="current-day-of-the-week" data-testid="currentDayOfTheWeek">Today is </span>
+  <span id="currentDay" class="current-day-of-the-week" data-testid="currentDayOfTheWeek"></span>
 <script>
 var getCurrentDayOfTheWeek = function() {
   var today = new Date();
@@ -22,7 +22,7 @@ var getCurrentDayOfTheWeek = function() {
 document.getElementById("currentDay").innerHTML = getCurrentDayOfTheWeek();
 </script>
 <br><span>The current UTC time is </span>
-<span id="currentTime" class="current-utc-time" data-testid="currentUTCTime">The current UTC time is </span>
+<span id="currentTime" class="current-utc-time" data-testid="currentUTCTime"></span>
 <script>
 var getCurrentUTCTimeInHoursMinutesSecondsMilliseconds = function() {
   var now = new Date();
